@@ -61,7 +61,7 @@ Puis exécuter les fonctions du contrat directement en console, c'est le plus pr
 nft = await SacNFT.deployed() //pour obtenir le last deployed
 await nft.name()
 await nft.symbol()
-await nft.generateSac("0x0445c33bdce670d57189158b88c0034b579f37ce", tokenURI )
+await nft.generateSac("0x0445c33bdce670d57189158b88c0034b579f37ce", tokenURI ) # adresse du minter qui va recevoir le NFT
 await nft.ownerOf(0)
 await nft.tokenURI(0)
 nft.address
