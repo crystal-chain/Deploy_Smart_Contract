@@ -1,0 +1,10 @@
+    
+    // only this functin was changed for ipfs URI
+    function generateSac( address minter,string memory url, string memory modele, string memory couleur, uint256 taille, string memory numeroserie) isMinter public returns(uint256){
+        _tokenIds++;
+        uint256 newItemId = _tokenIds;
+        _mint(minter, newItemId);
+        sacs[newItemId]=Sac(modele,couleur,taille,numeroserie);
+        _setTokenURI(newItemId, "https://france-estimations.fr/wp-content/uploads/2019/06/sac-chanel-cuir-matelasse-299x247.jpg");
+        return newItemId;
+    }
